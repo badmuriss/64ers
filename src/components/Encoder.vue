@@ -48,10 +48,12 @@
         <textarea ref="outputTextarea" :value="output" readonly
                   class="w-full h-40 bg-gray-700 text-gray-200 border border-gray-600 rounded-lg p-4 font-mono resize-none">
         </textarea>
-        <button v-show="!isDecodeMode" @click="copyOutput"
-                class="py-2 px-4 rounded-lg font-semibold text-white bg-violet-500 hover:bg-violet-600 transition-colors shadow">
-          Copy
-        </button>
+        <div class="flex justify-end">
+          <button @click="copyOutput"
+                  class="py-2 px-4 rounded-lg font-semibold text-white bg-violet-500 hover:bg-violet-600 transition-colors shadow">
+            Copy to clipboard
+          </button>
+        </div>
       </div>
 
       <!-- File Details & Download -->
